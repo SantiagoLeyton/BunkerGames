@@ -13,6 +13,7 @@ const games = [
       logo: 'images/gamesIcons/FC24.png',
       tags: ['Deportes', 'Competitivo', 'Multijugador', 'Solitario', 'EA Sports', 'Fútbol']
   },
+
   { //F1 24
     id: 'Game002',
     name: 'F1 24',
@@ -27,6 +28,7 @@ const games = [
     logo: 'images/gamesIcons/F1_24.png',
     tags: ['Deportes', 'Competitivo', 'Multijugador', 'Solitario', 'EA Sports', 'Carreras']
   },
+
   { //Left 4 Dead 2
     id: 'Game003',
     name: 'left 4 dead 2',
@@ -41,6 +43,7 @@ const games = [
     logo: 'images/gamesIcons/Left4Dead2.png',
     tags: ['Acción', 'Tiro', 'Cooperativo', 'Multijugador', 'Zombis', 'Supervivencia', 'Solitario']
   },
+
   { //Minecraft
       id: 'Game004',
       name: 'Minecraft (Java Edition)',
@@ -55,6 +58,7 @@ const games = [
       logo: 'images/gamesIcons/Minecraft.png',
       tags: ['Aventura', 'Construcción', 'Supervivencia', 'Multijugador', 'Solitario']
   },
+
   { //Mortal Kombat 11 Ultimate
     id: 'Game005',
     name: 'Mortal Kombat 11 Ultimate',
@@ -69,6 +73,7 @@ const games = [
     logo: 'images/gamesIcons/MK11.png',
     tags: ['Acción', 'Peleas', 'Competitivo', 'Multijugador', 'Solitario']
   },
+  
   { //Elden Ring
     id: 'Game006',
     name: 'Elden Ring',
@@ -83,6 +88,7 @@ const games = [
     logo: 'images/gamesIcons/EldenRing.png',
     tags: ['RPG', 'Acción', 'Mundo Abierto', 'Fantasía', 'Solitario']
   },
+
   { //Red Dead Redemption 2
     id: 'Game007',
     name: 'Red Dead Redemption 2',
@@ -97,6 +103,7 @@ const games = [
     logo: 'images/gamesIcons/RedDeadRedemption2.png',
     tags: ['Aventura', 'Solitario', 'Acción', 'Tiro', 'Supervivencia']
   },
+
   { //Resident Evil Village
     id: 'Game008',
     name: 'Resident Evil Village',
@@ -111,6 +118,7 @@ const games = [
     logo: 'images/gamesIcons/ResidentEvil.png',
     tags: ['Terror', 'Supervivencia', 'Solitario', 'Acción', 'Tiro']
   },
+
   { //Hogwarts Legacy
     id: 'Game009',
     name: 'Hogwarts Legacy',
@@ -125,6 +133,7 @@ const games = [
     logo: 'images/gamesIcons/HogwartsLegacy.png',
     tags: ['Magia', 'Mundo Abierto', 'RPG', 'Aventura', 'Acción', 'Solitario']
   },
+
   { //Cyberpunk 2077
     id: 'Game010',
     name: 'Cyberpunk 2077',
