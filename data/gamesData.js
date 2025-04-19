@@ -110,6 +110,34 @@ const games = [
     ],
     logo: 'images/gamesIcons/ResidentEvil.png',
     tags: ['Terror', 'Supervivencia', 'Solitario', 'Acción', 'Tiro']
+  },
+  { //Hogwarts Legacy
+    id: 'Game009',
+    name: 'Hogwarts Legacy',
+    description: 'Hogwarts Legacy es una aventura mágica de rol en mundo abierto ambientada en el universo del siglo XIX del Mundo Mágico. Como estudiante recién admitido en Hogwarts, descubrirás que posees una extraña habilidad relacionada con la Magia Antigua. Mientras exploras castillos, bosques y pueblos, aprenderás hechizos, prepararás pociones, domarás criaturas mágicas y descubrirás secretos que podrían cambiar el destino del mundo mágico. El juego ofrece una narrativa única y la libertad de elegir tu casa, tus amistades y tu camino como mago o bruja.',
+    price: 220000,
+    trailer: 'https://www.youtube.com/embed/S6GTl_vPRvU?si=ON4zv7dxt6LX1D7y',
+    images: [
+        'images/gamesPhotos/HogwartsLegacy_1.png',
+        'images/gamesPhotos/HogwartsLegacy_2.png',
+        'images/gamesPhotos/HogwartsLegacy_3.png'
+    ],
+    logo: 'images/gamesIcons/HogwartsLegacy.png',
+    tags: ['Magia', 'Mundo Abierto', 'RPG', 'Aventura', 'Acción', 'Solitario']
+  },
+  { //Cyberpunk 2077
+    id: 'Game010',
+    name: 'Cyberpunk 2077',
+    description: 'Cyberpunk 2077 es un RPG de mundo abierto desarrollado por CD Projekt RED, ambientado en Night City, una megalópolis futurista obsesionada con el poder, el glamour y la modificación corporal. El jugador encarna a V, un mercenario que busca un implante único que promete la inmortalidad. La historia se ramifica según tus decisiones, con múltiples caminos, finales y formas de abordar misiones. El juego destaca por su impresionante nivel de detalle, atmósfera inmersiva, música envolvente y libertad de acción. Aunque tuvo un lanzamiento accidentado, hoy en día ofrece una experiencia mucho más pulida y completa.',
+    price: 100000,
+    trailer: 'https://www.youtube.com/embed/8X2kIfS6fb8?si=o1MdJ4tmRfg_5apR',
+    images: [
+        'images/gamesPhotos/Cyberpunk2077_1.png',
+        'images/gamesPhotos/Cyberpunk2077_2.png',
+        'images/gamesPhotos/Cyberpunk2077_3.png'
+    ],
+    logo: 'images/gamesIcons/Cyberpunk2077.png',
+    tags: ['RPG', 'Acción', 'Futurista', 'Solitario']
   }
 ]
 
