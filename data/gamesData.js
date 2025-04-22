@@ -3,7 +3,7 @@ const games = [
       id: 'Game001',
       name: 'EA SPORTS FC™ 24',
       description: 'FIFA 24 es el simulador de fútbol más completo y realista, ofreciéndote la oportunidad de vivir la emoción del deporte rey. Puedes jugar con los equipos y jugadores más icónicos del mundo, y competir en los torneos más prestigiosos, incluyendo ligas y copas internacionales. El juego ofrece varios modos como el Modo Carrera, donde podrás gestionar tu propio equipo o crear tu carrera como futbolista, y Ultimate Team, que te permite armar el equipo de tus sueños con jugadores de diferentes épocas. También podrás disfrutar de Clubes Pro, para formar un equipo y competir en línea, o Volta, donde se juega al fútbol callejero en escenarios urbanos. Con gráficos impresionantes y un control más fluido, FIFA 24 te permite vivir el fútbol como nunca antes, ya sea solo o acompañado.',
-      price: 184900,
+      price: 185000,
       trailer: 'https://www.youtube.com/embed/-vL01jbgENE?si=p2hNPqzO1YAElylc',
       images: [
           'images/gamesPhotos/FC24_1.png',
