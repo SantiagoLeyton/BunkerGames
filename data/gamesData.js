@@ -147,7 +147,169 @@ const games = [
     ],
     logo: 'images/gamesIcons/Cyberpunk2077.png',
     tags: ['RPG', 'Acción', 'Futurista', 'Solitario']
+  },
+
+  { //The Witcher 3: Wild Hunt - Complete Edition
+    id: 'Game011',
+    name: 'The Witcher 3: Wild Hunt - Complete Edition',
+    description: 'The Witcher 3: Wild Hunt – Edición Completa es un RPG de mundo abierto donde controlas a Geralt de Rivia, un cazador de monstruos en un mundo de fantasía oscura. Incluye el juego base y sus dos expansiones, con más de 150 horas de aventura, decisiones impactantes y una historia envolvente.',
+    price: 30000,
+    trailer: 'https://www.youtube.com/embed/JrwMAHVDbuU?si=1ELtbqdGz584h1k7',
+    images: [
+        'images/gamesPhotos/TheWitcher3_1.png',
+        'images/gamesPhotos/TheWitcher3_2.png',
+        'images/gamesPhotos/TheWitcher3_3.png'
+    ],
+    logo: 'images/gamesIcons/TheWitcher3.png',
+    tags: ['RPG', 'Acción', 'Aventura', 'Mundo Abierto', 'Fantasía', 'Solitario']
+  },
+
+  { //Dragon Ball Z: Kakarot - Legendary Edition
+    id: 'Game012',
+    name: 'Dragon Ball Z: Kakarot - Edición Legendaria',
+    description: 'Dragon Ball Z: Kakarot - Edición Legendaria es una experiencia RPG de acción que te sumerge por completo en la historia épica de Goku y los Guerreros Z. Revive los momentos más memorables de Dragon Ball Z, desde la llegada de Raditz hasta la saga de Majin Buu, con combates espectaculares, animaciones cinematográficas y una narrativa profundamente fiel al anime original. Esta edición legendaria incluye no solo el juego base, sino también los contenidos descargables de las expansiones “El Despertar de un Nuevo Poder” y “Trunks: El Guerrero de la Esperanza”, ofreciendo aún más horas de historia, personajes y poder. Explora un mundo abierto vibrante, entrena, pesca, cocina y fortalece tus habilidades mientras formas lazos con personajes icónicos y luchas contra enemigos legendarios. Es el juego ideal tanto para fanáticos de Dragon Ball como para los que buscan una aventura envolvente y emocional.',
+    price: 185000,
+    trailer: 'https://www.youtube.com/embed/pUOpykBtF5k?si=ecmB-kpUJXnvauIr',
+    images: [
+        'images/gamesPhotos/DBZkakarot1.png',
+        'images/gamesPhotos/DBZkakarot2.png',
+        'images/gamesPhotos/DBZkakarot3.png'
+    ],
+    logo: 'images/gamesIcons/DBZkakarot.png',
+    tags: ['Acción', 'RPG', 'Anime', 'Aventura', 'Pelea', 'Historia', 'Exploración', 'Solitario']
+  },
+
+  { //Grand Theft Auto V - Premium Edition
+    id: 'Game013',
+    name: 'Grand Theft Auto V - Edition Premium',
+    description: 'Grand Theft Auto V - Edición Premium te lanza directo al caos y lujo de Los Santos, con el juego base, GTA Online y el Criminal Enterprise Starter Pack para que inicies tu imperio criminal con todo. Acción, velocidad y libertad total en un solo paquete.',
+    price: 75000,
+    trailer: 'https://www.youtube.com/embed/hBvMSP7cI-Q?si=aONuke3py2gvciD3',
+    images: [
+        'images/gamesPhotos/GtaV_1.png',
+        'images/gamesPhotos/GtaV_2.png',
+        'images/gamesPhotos/GtaV_3.png'
+    ],
+    logo: 'images/gamesIcons/GtaV.png',
+    tags: ['Acción', 'Aventura', 'Mundo Abierto', 'Solitario', 'Multijugador', 'Tiro', 'Vehículos']
   }
 ]
 
-const cards = []
+const cards = [
+  { //Robux 800
+    id: 'Card001',
+    name: 'Roblox | 800 Robux',
+    description: 'Obten 800 Robux para gastar en Roblox, esto es mucho más que un videojuego: es una plataforma global de creación y juego en línea donde millones de usuarios pueden diseñar sus propios mundos virtuales y disfrutar de experiencias interactivas creadas por otros jugadores. Desarrollado por Roblox Corporation y lanzado en 2006, Roblox se ha convertido en uno de los ecosistemas de juego más grandes y dinámicos del mundo.',
+    logo: 'images/cardsIcons/Robux_800.png',
+    price: 42500,
+    stock: 80
+  },
+
+  { //Robux 2000
+    id: 'Card002',
+    name: 'Roblox | 2000 Robux',
+    description: 'Obten 2000 Robux para gastar en Roblox, esto es mucho más que un videojuego: es una plataforma global de creación y juego en línea donde millones de usuarios pueden diseñar sus propios mundos virtuales y disfrutar de experiencias interactivas creadas por otros jugadores. Desarrollado por Roblox Corporation y lanzado en 2006, Roblox se ha convertido en uno de los ecosistemas de juego más grandes y dinámicos del mundo.',
+    logo: 'images/cardsIcons/Robux_2000.png',
+    price: 105000,
+    stock: 93
+  },
+
+  { //Robux 4500
+    id: 'Card003',
+    name: 'Roblox | 4500 Robux',
+    description: 'Obten 4500 Robux para gastar en Roblox, esto es mucho más que un videojuego: es una plataforma global de creación y juego en línea donde millones de usuarios pueden diseñar sus propios mundos virtuales y disfrutar de experiencias interactivas creadas por otros jugadores. Desarrollado por Roblox Corporation y lanzado en 2006, Roblox se ha convertido en uno de los ecosistemas de juego más grandes y dinámicos del mundo.',
+    logo: 'images/cardsIcons/Robux_4500.png',
+    price: 210000,
+    stock: 120
+  },
+
+  { //Pase de diamante Clash Royale
+    id: 'Card004',
+    name: 'Pase de diamante Clash Royale',
+    description: 'Lleva tu juego al siguiente nivel con el Pass Royale, el complemento premium que transforma cada temporada de Clash Royale en una auténtica mina de oro. Gana más, desbloquea más, y domina las arenas con estilo mientras recolectas recompensas exclusivas y ventajas únicas.',
+    logo: 'images/cardsIcons/CRPaseDeDiamante.png',
+    price: 70000,
+    stock: 45
+  },
+
+  { //1200 Gemas Clash Royale
+    id: 'Card005',
+    name: '1200 Gemas Clash Royale',
+    description: 'Obten 1200 Gemas, estas son el recurso más codiciado en Clash Royale, el combustible premium que convierte tu progreso en una carrera hacia la cima. Con solo unas cuantas gemas, puedes acelerar mejoras, desbloquear cofres al instante o participar en los desafíos más intensos del juego.',
+    logo: 'images/cardsIcons/CR1200Gemas.png',
+    price: 55000,
+    stock: 97
+  },
+
+  { //14000 Gemas Clash Royale
+    id: 'Card006',
+    name: '14000 Gemas Clash Royale',
+    description: 'Obten 14000 Gemas, estas son el recurso más codiciado en Clash Royale, el combustible premium que convierte tu progreso en una carrera hacia la cima. Con solo unas cuantas gemas, puedes acelerar mejoras, desbloquear cofres al instante o participar en los desafíos más intensos del juego.',
+    logo: 'images/cardsIcons/CR14000Gemas.png',
+    price: 580000,
+    stock: 32
+  },
+
+  { //CSGO.net $5
+    id: 'Card007',
+    name: 'CSGO.net | $10',
+    description: 'Genera un código digital que puedes utilizar en el sitio web oficial de CSGO 500 para añadir $5 dolares de fondos a tu cuenta. Estos fondos, denominados BUX, te permiten participar en diversos modos de juego y adquirir skins de CS:GO para personalizar tus armas',
+    logo: 'images/cardsIcons/CSGO_5USD.png',
+    price: 20000,
+    stock: 68
+  },
+
+  { //CSGO.net $20
+    id: 'Card008',
+    name: 'CSGO.net | $20',
+    description: 'Genera un código digital que puedes utilizar en el sitio web oficial de CSGO 500 para añadir $20 dolares de fondos a tu cuenta. Estos fondos, denominados BUX, te permiten participar en diversos modos de juego y adquirir skins de CS:GO para personalizar tus armas',
+    logo: 'images/cardsIcons/CSGO_20USD.png',
+    price: 85000,
+    stock: 46
+  },
+
+  { //CSGO.net $50
+    id: 'Card009',
+    name: 'CSGO.net | $50',
+    description: 'Genera un código digital que puedes utilizar en el sitio web oficial de CSGO 500 para añadir $50 dolares de fondos a tu cuenta. Estos fondos, denominados BUX, te permiten participar en diversos modos de juego y adquirir skins de CS:GO para personalizar tus armas',
+    logo: 'images/cardsIcons/CSGO_50USD.png',
+    price: 210000,
+    stock: 65
+  },
+
+  { // 1000 Valorant Points
+    id: 'Card010',
+    name: 'Valorant | 1000 Valorant Points',
+    description: '¡Recarga tu cuenta con Valorant Points (VP) y destaca en el campo de batalla! Con esta tarjeta puedes comprar: Skins exclusivas de armas, el pase de batalla con recompensas premium y accesorios cosméticos para tu perfil.',
+    logo: 'images/cardsIcons/Valorant1000VP.png',
+    price: 35000,
+    stock: 74
+  },
+
+  { // Valorant Agente Élite
+    id: 'Card011',
+    name: 'Valorant | Agente Élite',
+    description: 'Recarga tus Valorant Points y desbloquea lo mejor de tu arsenal. Con esta tarjeta, accede a: Skins edición limitada. Variantes de armas con efectos especiales. Contenido exclusivo del Pase de Batalla. Código digital instantáneo. Ideal para quienes quieren destacar en cada partida.',
+    logo: 'images/cardsIcons/ValorantAgenteElite.png',
+    price: 50000,
+    stock: 99
+  },
+
+  { // Valorant Agente Elite
+    id: 'Card012',
+    name: 'Valorant | Colección Premium',
+    description: 'La personalización es poder. Esta tarjeta te permite conseguir: Bundles de armas temáticos. Tarjetas de jugador y sprays exclusivos. Avances de niveles en el Pase de Batalla. Compatible con cualquier cuenta LATAM. Canje rápido desde el cliente de juego Riot.',
+    logo: 'images/cardsIcons/ValorantColeccionPremium.png',
+    price: 75000,
+    stock: 67
+  },
+
+  { // Fortnite 1000 VBucks
+    id: 'Card013',
+    name: 'Fortnite | 1000 V-Bucks',
+    description: '¡Haz que tu estilo brille en la isla! Con esta tarjeta puedes obtener PaVos (V-Bucks) para comprar: Skins de personajes y armas. Bailes y gestos divertidos. El Pase de Batalla y niveles extra.',
+    logo: 'images/cardsIcons/Fortnite1000VBucks.png',
+    price: 24000,
+    stock: 54
+  }
+]

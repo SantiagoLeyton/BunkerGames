@@ -17,7 +17,6 @@ Nuevo Juego
 Nueva Tarjeta
     {
         id: '',
-        gameId: '',
         name: '',
         description: '',
         logo: 'images/cardsIcons/.png',
