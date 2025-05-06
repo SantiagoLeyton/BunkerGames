@@ -1,13 +1,306 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bunker Games</title>
-    <link id="favicon" rel="icon" type="image/png" href="images/PageIcons/favicon1.png">
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BunkerGames - Tienda Virtual</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <script src="documents.js"></script>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <button class="butto" data-text="Awesome">
+      <span class="actual-text">&nbsp;bunker&nbsp;</span>
+      <span aria-hidden="true" class="hover-text">&nbsp;bunker games&nbsp;</span>
+    </button>
+  
+    <nav class="menu">
+      <button class="btn">inicio</button>
+      <button class="btn">categorias</button>
+      <button class="btn">ofertas</button>
+      <button class="btn">tarjetas de regalo</button>
+    </nav>
+  
+    <div class="navbar-right">
+      <div class="cart">
+        🛒 <span class="cart-count">0</span>
+      </div>
+  
+      <button class="btn">perfil</button>
+      <button class="btn" onclick="window.location.href='pages/inicioSesion.html'">login </button>
+  
+      <div class="searchBox">
+        <input class="searchInput" type="text" placeholder="Buscar...">
+        <button class="searchButton">
+          <!-- Ícono de búsqueda -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+            <g clip-path="url(#clip0_2_17)">
+              <g filter="url(#filter0_d_2_17)">
+                <path d="M23.7953 23.9182L19.0585 19.1814M19.0585 19.1814C19.8188 18.4211 20.4219 17.5185 20.8333 16.5251C21.2448 15.5318 21.4566 14.4671 21.4566 13.3919C21.4566 12.3167 21.2448 11.252 20.8333 10.2587C20.4219 9.2653 19.8188 8.36271 19.0585 7.60242C18.2982 6.84214 17.3956 6.23905 16.4022 5.82759C15.4089 5.41612 14.3442 5.20435 13.269 5.20435C12.1938 5.20435 11.1291 5.41612 10.1358 5.82759C9.1424 6.23905 8.23981 6.84214 7.47953 7.60242C5.94407 9.13789 5.08145 11.2204 5.08145 13.3919C5.08145 15.5634 5.94407 17.6459 7.47953 19.1814C9.01499 20.7168 11.0975 21.5794 13.269 21.5794C15.4405 21.5794 17.523 20.7168 19.0585 19.1814Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" shape-rendering="crispEdges"></path>
+              </g>
+            </g>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner principal -->
+  <!-- Banner principal -->
+<div class="hero">
+  <div class="hero-text">
+    Bienvenidos a Bunker Games
+  </div>
+  <div class="slider">
+    <div class="slide-track">
+      <div class="slide"><img src="imagenes/resident evil 4.jpeg" alt="Imagen 1"></div>
+      <div class="slide"><img src="imagenes/fornitebaner.jpg" alt="Imagen 2"></div>
+      <div class="slide"><img src="imagen3.jpg" alt="Imagen 3"></div>
+      <div class="slide"><img src="imagen4.jpg" alt="Imagen 4"></div>
+      <div class="slide"><img src="imagen1.jpg" alt="Imagen 1"></div>
+      <div class="slide"><img src="imagen2.jpg" alt="Imagen 2"></div>
+      <div class="slide"><img src="imagen3.jpg" alt="Imagen 3"></div>
+      <div class="slide"><img src="imagen4.jpg" alt="Imagen 4"></div>
+    </div>
+  </div>
+</div>
+
+  <!-- Categorías -->
+  <section class="categories">
+    <h2>Categorías</h2>
+    <div class="category-list">
+      <div class="category">Acción</div>
+      <div class="category">Aventura</div>
+      <div class="category">Estrategia</div>
+      <div class="category">Deportes</div>
+      <div class="category">RPG</div>
+    </div>
+  </section>
+
+  <!-- Productos -->
+  <div class="main-container">
+    <div class="filters">
+        <h2>Filtros</h2>
+      
+        <div class="filter-section">
+          <h3>Precio</h3>
+          <label><input type="checkbox"> Menos de $10</label>
+          <label><input type="checkbox"> $10 - $30</label>
+          <label><input type="checkbox"> $30 - $60</label>
+          <label><input type="checkbox"> Más de $60</label>
+        </div>
+      
+        <div class="filter-section">
+          <h3>Categorías</h3>
+          <label><input type="checkbox"> Acción</label>
+          <label><input type="checkbox"> Aventura</label>
+          <label><input type="checkbox"> RPG</label>
+          <label><input type="checkbox"> Estrategia</label>
+          <label><input type="checkbox"> Deportes</label>
+          <label><input type="checkbox"> Terror</label>
+        </div>
+      
+        <div class="filter-section">
+          <h3>Otros</h3>
+          <label><input type="checkbox"> Multijugador</label>
+          <label><input type="checkbox"> Cooperativo</label>
+          <label><input type="checkbox"> Mundo Abierto</label>
+        </div>
+    </div>
+    
+    <div class="products">
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200x250" alt="Juego 2">
+            <h3>Juego Aventura 2</h3>
+            <p>$39.99</p>
+            <input hidden="" class="cart-toggle" id="cart-toggle" type="checkbox" />
+<!-- From Uiverse.io by Df12345677 --> 
+<button class="button">
+  <span>Add to cart</span>
+  <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <defs>  </defs> <g id="cart"> <circle r="1.91" cy="20.59" cx="10.07" class="cls-1"></circle> <circle r="1.91" cy="20.59" cx="18.66" class="cls-1"></circle> <path d="M.52,1.5H3.18a2.87,2.87,0,0,1,2.74,2L9.11,13.91H8.64A2.39,2.39,0,0,0,6.25,16.3h0a2.39,2.39,0,0,0,2.39,2.38h10" class="cls-1"></path> <polyline points="7.21 5.32 22.48 5.32 22.48 7.23 20.57 13.91 9.11 13.91" class="cls-1"></polyline> </g> </g></svg>
+</button>
+          </div>
+          <div class="product-card">
+            <img src="https://via.placeholder.com/200x250" alt="Juego 2">
+            <h3>Juego Aventura 2</h3>
+            <p>$3.99</p>
+            <button class="button">
+              <span>Add to cart</span>
+              <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <defs>  </defs> <g id="cart"> <circle r="1.91" cy="20.59" cx="10.07" class="cls-1"></circle> <circle r="1.91" cy="20.59" cx="18.66" class="cls-1"></circle> <path d="M.52,1.5H3.18a2.87,2.87,0,0,1,2.74,2L9.11,13.91H8.64A2.39,2.39,0,0,0,6.25,16.3h0a2.39,2.39,0,0,0,2.39,2.38h10" class="cls-1"></path> <polyline points="7.21 5.32 22.48 5.32 22.48 7.23 20.57 13.91 9.11 13.91" class="cls-1"></polyline> </g> </g></svg>
+            </button>
+          </div>
+          <div class="product-card">
+            <img src="https://via.placeholder.com/200x250" alt="Juego 2">
+            <h3>Juego Aventura 2</h3>
+            <p>$39.99</p>
+            <button class="button">
+              <span>Add to cart</span>
+              <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <defs>  </defs> <g id="cart"> <circle r="1.91" cy="20.59" cx="10.07" class="cls-1"></circle> <circle r="1.91" cy="20.59" cx="18.66" class="cls-1"></circle> <path d="M.52,1.5H3.18a2.87,2.87,0,0,1,2.74,2L9.11,13.91H8.64A2.39,2.39,0,0,0,6.25,16.3h0a2.39,2.39,0,0,0,2.39,2.38h10" class="cls-1"></path> <polyline points="7.21 5.32 22.48 5.32 22.48 7.23 20.57 13.91 9.11 13.91" class="cls-1"></polyline> </g> </g></svg>
+            </button>
+          </div>
+          <div class="product-card">
+            <img src="https://via.placeholder.com/200x250" alt="Juego 2">
+            <h3>Juego Aventura 2</h3>
+            <p>$39.99</p>
+            <button class="button">
+              <span>Add to cart</span>
+              <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <defs>  </defs> <g id="cart"> <circle r="1.91" cy="20.59" cx="10.07" class="cls-1"></circle> <circle r="1.91" cy="20.59" cx="18.66" class="cls-1"></circle> <path d="M.52,1.5H3.18a2.87,2.87,0,0,1,2.74,2L9.11,13.91H8.64A2.39,2.39,0,0,0,6.25,16.3h0a2.39,2.39,0,0,0,2.39,2.38h10" class="cls-1"></path> <polyline points="7.21 5.32 22.48 5.32 22.48 7.23 20.57 13.91 9.11 13.91" class="cls-1"></polyline> </g> </g></svg>
+            </button>
+          </div>
+          <div class="product-card">
+            <img src="https://via.placeholder.com/200x250" alt="Juego 2">
+            <h3>Juego Aventura 2</h3>
+            <p>$39.99</p>
+            <button class="button">
+              <span>Add to cart</span>
+              <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <defs>  </defs> <g id="cart"> <circle r="1.91" cy="20.59" cx="10.07" class="cls-1"></circle> <circle r="1.91" cy="20.59" cx="18.66" class="cls-1"></circle> <path d="M.52,1.5H3.18a2.87,2.87,0,0,1,2.74,2L9.11,13.91H8.64A2.39,2.39,0,0,0,6.25,16.3h0a2.39,2.39,0,0,0,2.39,2.38h10" class="cls-1"></path> <polyline points="7.21 5.32 22.48 5.32 22.48 7.23 20.57 13.91 9.11 13.91" class="cls-1"></polyline> </g> </g></svg>
+            </button>
+          </div>
+          <div class="product-card">
+            <img src="https://via.placeholder.com/200x250" alt="Juego 2">
+            <h3>Juego Aventura 2</h3>
+            <p>$39.99</p>
+            <button class="button">
+              <span>Add to cart</span>
+              <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <defs>  </defs> <g id="cart"> <circle r="1.91" cy="20.59" cx="10.07" class="cls-1"></circle> <circle r="1.91" cy="20.59" cx="18.66" class="cls-1"></circle> <path d="M.52,1.5H3.18a2.87,2.87,0,0,1,2.74,2L9.11,13.91H8.64A2.39,2.39,0,0,0,6.25,16.3h0a2.39,2.39,0,0,0,2.39,2.38h10" class="cls-1"></path> <polyline points="7.21 5.32 22.48 5.32 22.48 7.23 20.57 13.91 9.11 13.91" class="cls-1"></polyline> </g> </g></svg>
+            </button>
+          </div>
+          <div class="product-card">
+            <img src="https://via.placeholder.com/200x250" alt="Juego 2">
+            <h3>Juego Aventura 2</h3>
+            <p>$39.99</p>
+            <button class="button">
+              <span>Add to cart</span>
+              <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <defs>  </defs> <g id="cart"> <circle r="1.91" cy="20.59" cx="10.07" class="cls-1"></circle> <circle r="1.91" cy="20.59" cx="18.66" class="cls-1"></circle> <path d="M.52,1.5H3.18a2.87,2.87,0,0,1,2.74,2L9.11,13.91H8.64A2.39,2.39,0,0,0,6.25,16.3h0a2.39,2.39,0,0,0,2.39,2.38h10" class="cls-1"></path> <polyline points="7.21 5.32 22.48 5.32 22.48 7.23 20.57 13.91 9.11 13.91" class="cls-1"></polyline> </g> </g></svg>
+            </button>
+          </div>
+          <div class="product-card">
+            <img src="https://via.placeholder.com/200x250" alt="Juego 2">
+            <h3>Juego Aventura 2</h3>
+            <p>$39.99</p>
+            <button class="button">
+              <span>Add to cart</span>
+              <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <defs>  </defs> <g id="cart"> <circle r="1.91" cy="20.59" cx="10.07" class="cls-1"></circle> <circle r="1.91" cy="20.59" cx="18.66" class="cls-1"></circle> <path d="M.52,1.5H3.18a2.87,2.87,0,0,1,2.74,2L9.11,13.91H8.64A2.39,2.39,0,0,0,6.25,16.3h0a2.39,2.39,0,0,0,2.39,2.38h10" class="cls-1"></path> <polyline points="7.21 5.32 22.48 5.32 22.48 7.23 20.57 13.91 9.11 13.91" class="cls-1"></polyline> </g> </g></svg>
+            </button>
+          </div>
+          <div class="product-card">
+            <img src="https://via.placeholder.com/200x250" alt="Juego 2">
+            <h3>Juego Aventura 2</h3>
+            <p>$39.99</p>
+            <button class="button">
+              <span>Add to cart</span>
+              <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <defs>  </defs> <g id="cart"> <circle r="1.91" cy="20.59" cx="10.07" class="cls-1"></circle> <circle r="1.91" cy="20.59" cx="18.66" class="cls-1"></circle> <path d="M.52,1.5H3.18a2.87,2.87,0,0,1,2.74,2L9.11,13.91H8.64A2.39,2.39,0,0,0,6.25,16.3h0a2.39,2.39,0,0,0,2.39,2.38h10" class="cls-1"></path> <polyline points="7.21 5.32 22.48 5.32 22.48 7.23 20.57 13.91 9.11 13.91" class="cls-1"></polyline> </g> </g></svg>
+            </button>
+          </div>
+          <div class="product-card">
+            <img src="https://via.placeholder.com/200x250" alt="Juego 2">
+            <h3>Juego Aventura 2</h3>
+            <p>$39.99</p>
+            <button class="button">
+              <span>Add to cart</span>
+              <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <defs>  </defs> <g id="cart"> <circle r="1.91" cy="20.59" cx="10.07" class="cls-1"></circle> <circle r="1.91" cy="20.59" cx="18.66" class="cls-1"></circle> <path d="M.52,1.5H3.18a2.87,2.87,0,0,1,2.74,2L9.11,13.91H8.64A2.39,2.39,0,0,0,6.25,16.3h0a2.39,2.39,0,0,0,2.39,2.38h10" class="cls-1"></path> <polyline points="7.21 5.32 22.48 5.32 22.48 7.23 20.57 13.91 9.11 13.91" class="cls-1"></polyline> </g> </g></svg>
+            </button>
+          </div>
+          <div class="product-card">
+            <img src="https://via.placeholder.com/200x250" alt="Juego 2">
+            <h3>Juego Aventura 2</h3>
+            <p>$39.99</p>
+            <button class="button">
+              <span>Add to cart</span>
+              <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <defs>  </defs> <g id="cart"> <circle r="1.91" cy="20.59" cx="10.07" class="cls-1"></circle> <circle r="1.91" cy="20.59" cx="18.66" class="cls-1"></circle> <path d="M.52,1.5H3.18a2.87,2.87,0,0,1,2.74,2L9.11,13.91H8.64A2.39,2.39,0,0,0,6.25,16.3h0a2.39,2.39,0,0,0,2.39,2.38h10" class="cls-1"></path> <polyline points="7.21 5.32 22.48 5.32 22.48 7.23 20.57 13.91 9.11 13.91" class="cls-1"></polyline> </g> </g></svg>
+            </button>
+          </div>
+          <div class="product-card">
+            <img src="https://via.placeholder.com/200x250" alt="Juego 2">
+            <h3>Juego Aventura 2</h3>
+            <p>$39.99</p>
+            <button class="button">
+              <span>Add to cart</span>
+              <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <defs>  </defs> <g id="cart"> <circle r="1.91" cy="20.59" cx="10.07" class="cls-1"></circle> <circle r="1.91" cy="20.59" cx="18.66" class="cls-1"></circle> <path d="M.52,1.5H3.18a2.87,2.87,0,0,1,2.74,2L9.11,13.91H8.64A2.39,2.39,0,0,0,6.25,16.3h0a2.39,2.39,0,0,0,2.39,2.38h10" class="cls-1"></path> <polyline points="7.21 5.32 22.48 5.32 22.48 7.23 20.57 13.91 9.11 13.91" class="cls-1"></polyline> </g> </g></svg>
+            </button>
+          </div>
+          <div class="product-card">
+            <img src="https://via.placeholder.com/200x250" alt="Juego 2">
+            <h3>Juego Aventura 2</h3>
+            <p>$39.99</p>
+            <button class="button">
+              <span>Add to cart</span>
+              <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <defs>  </defs> <g id="cart"> <circle r="1.91" cy="20.59" cx="10.07" class="cls-1"></circle> <circle r="1.91" cy="20.59" cx="18.66" class="cls-1"></circle> <path d="M.52,1.5H3.18a2.87,2.87,0,0,1,2.74,2L9.11,13.91H8.64A2.39,2.39,0,0,0,6.25,16.3h0a2.39,2.39,0,0,0,2.39,2.38h10" class="cls-1"></path> <polyline points="7.21 5.32 22.48 5.32 22.48 7.23 20.57 13.91 9.11 13.91" class="cls-1"></polyline> </g> </g></svg>
+            </button>
+          </div>
+          <div class="product-card">
+            <img src="https://via.placeholder.com/200x250" alt="Juego 2">
+            <h3>Juego Aventura 2</h3>
+            <p>$39.99</p>
+            <button class="button">
+              <span>Add to cart</span>
+              <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <defs>  </defs> <g id="cart"> <circle r="1.91" cy="20.59" cx="10.07" class="cls-1"></circle> <circle r="1.91" cy="20.59" cx="18.66" class="cls-1"></circle> <path d="M.52,1.5H3.18a2.87,2.87,0,0,1,2.74,2L9.11,13.91H8.64A2.39,2.39,0,0,0,6.25,16.3h0a2.39,2.39,0,0,0,2.39,2.38h10" class="cls-1"></path> <polyline points="7.21 5.32 22.48 5.32 22.48 7.23 20.57 13.91 9.11 13.91" class="cls-1"></polyline> </g> </g></svg>
+            </button>          </div>
+          <div class="product-card">
+            <img src="https://via.placeholder.com/200x250" alt="Juego 2">
+            <h3>Juego Aventura 2</h3>
+            <p>$39.99</p>
+            <button class="button">
+              <span>Add to cart</span>
+              <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <defs>  </defs> <g id="cart"> <circle r="1.91" cy="20.59" cx="10.07" class="cls-1"></circle> <circle r="1.91" cy="20.59" cx="18.66" class="cls-1"></circle> <path d="M.52,1.5H3.18a2.87,2.87,0,0,1,2.74,2L9.11,13.91H8.64A2.39,2.39,0,0,0,6.25,16.3h0a2.39,2.39,0,0,0,2.39,2.38h10" class="cls-1"></path> <polyline points="7.21 5.32 22.48 5.32 22.48 7.23 20.57 13.91 9.11 13.91" class="cls-1"></polyline> </g> </g></svg>
+            </button>          </div>
+          <div class="product-card">
+            <img src="https://via.placeholder.com/200x250" alt="Juego 2">
+            <h3>Juego Aventura 2</h3>
+            <p>$39.99</p>
+            <button class="button">
+              <span>Add to cart</span>
+              <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <defs>  </defs> <g id="cart"> <circle r="1.91" cy="20.59" cx="10.07" class="cls-1"></circle> <circle r="1.91" cy="20.59" cx="18.66" class="cls-1"></circle> <path d="M.52,1.5H3.18a2.87,2.87,0,0,1,2.74,2L9.11,13.91H8.64A2.39,2.39,0,0,0,6.25,16.3h0a2.39,2.39,0,0,0,2.39,2.38h10" class="cls-1"></path> <polyline points="7.21 5.32 22.48 5.32 22.48 7.23 20.57 13.91 9.11 13.91" class="cls-1"></polyline> </g> </g></svg>
+            </button>          </div>
+          <div class="product-card">
+            <img src="https://via.placeholder.com/200x250" alt="Juego 2">
+            <h3>Juego Aventura 2</h3>
+            <p>$39.99</p>
+            <button class="button">
+              <span>Add to cart</span>
+              <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <defs>  </defs> <g id="cart"> <circle r="1.91" cy="20.59" cx="10.07" class="cls-1"></circle> <circle r="1.91" cy="20.59" cx="18.66" class="cls-1"></circle> <path d="M.52,1.5H3.18a2.87,2.87,0,0,1,2.74,2L9.11,13.91H8.64A2.39,2.39,0,0,0,6.25,16.3h0a2.39,2.39,0,0,0,2.39,2.38h10" class="cls-1"></path> <polyline points="7.21 5.32 22.48 5.32 22.48 7.23 20.57 13.91 9.11 13.91" class="cls-1"></polyline> </g> </g></svg>
+            </button>          </div>
+          <div class="product-card">
+            <img src="https://via.placeholder.com/200x250" alt="Juego 2">
+            <h3>Juego Aventura 2</h3>
+            <p>$39.99</p>
+            <button class="button">
+              <span>Add to cart</span>
+              <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <defs>  </defs> <g id="cart"> <circle r="1.91" cy="20.59" cx="10.07" class="cls-1"></circle> <circle r="1.91" cy="20.59" cx="18.66" class="cls-1"></circle> <path d="M.52,1.5H3.18a2.87,2.87,0,0,1,2.74,2L9.11,13.91H8.64A2.39,2.39,0,0,0,6.25,16.3h0a2.39,2.39,0,0,0,2.39,2.38h10" class="cls-1"></path> <polyline points="7.21 5.32 22.48 5.32 22.48 7.23 20.57 13.91 9.11 13.91" class="cls-1"></polyline> </g> </g></svg>
+            </button>          </div>
+          <div class="product-card">
+            <img src="https://via.placeholder.com/200x250" alt="Juego 2">
+            <h3>Juego Aventura 2</h3>
+            <p>$39.99</p>
+            <button class="button">
+              <span>Add to cart</span>
+              <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <defs>  </defs> <g id="cart"> <circle r="1.91" cy="20.59" cx="10.07" class="cls-1"></circle> <circle r="1.91" cy="20.59" cx="18.66" class="cls-1"></circle> <path d="M.52,1.5H3.18a2.87,2.87,0,0,1,2.74,2L9.11,13.91H8.64A2.39,2.39,0,0,0,6.25,16.3h0a2.39,2.39,0,0,0,2.39,2.38h10" class="cls-1"></path> <polyline points="7.21 5.32 22.48 5.32 22.48 7.23 20.57 13.91 9.11 13.91" class="cls-1"></polyline> </g> </g></svg>
+            </button>          </div>
+          <div class="product-card">
+            <img src="https://via.placeholder.com/200x250" alt="Juego 2">
+            <h3>Juego Aventura 2</h3>
+            <p>$39.99</p>
+            <button class="button">
+              <span>Add to cart</span>
+              <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <defs>  </defs> <g id="cart"> <circle r="1.91" cy="20.59" cx="10.07" class="cls-1"></circle> <circle r="1.91" cy="20.59" cx="18.66" class="cls-1"></circle> <path d="M.52,1.5H3.18a2.87,2.87,0,0,1,2.74,2L9.11,13.91H8.64A2.39,2.39,0,0,0,6.25,16.3h0a2.39,2.39,0,0,0,2.39,2.38h10" class="cls-1"></path> <polyline points="7.21 5.32 22.48 5.32 22.48 7.23 20.57 13.91 9.11 13.91" class="cls-1"></polyline> </g> </g></svg>
+            </button>          </div>
+          <div class="product-card">
+            <img src="https://via.placeholder.com/200x250" alt="Juego 2">
+            <h3>Juego Aventura 2</h3>
+            <p>$39.99</p>
+            <button class="button">
+              <span>Add to cart</span>
+              <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <defs>  </defs> <g id="cart"> <circle r="1.91" cy="20.59" cx="10.07" class="cls-1"></circle> <circle r="1.91" cy="20.59" cx="18.66" class="cls-1"></circle> <path d="M.52,1.5H3.18a2.87,2.87,0,0,1,2.74,2L9.11,13.91H8.64A2.39,2.39,0,0,0,6.25,16.3h0a2.39,2.39,0,0,0,2.39,2.38h10" class="cls-1"></path> <polyline points="7.21 5.32 22.48 5.32 22.48 7.23 20.57 13.91 9.11 13.91" class="cls-1"></polyline> </g> </g></svg>
+            </button>          </div>
+          
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 BunkerGames. Todos los derechos reservados.</p>
+  </footer>
+
 </body>
 </html>
