@@ -1,17 +1,16 @@
+    const registerForm = document.getElementById('registerForm');
 
-    const loginForm = document.getElementById('loginForm');
-
-    loginForm.addEventListener('submit', async (e) => {
+    registerForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      const formData = new FormData(loginForm);
+      const formData = new FormData(registerForm);
       const data = {
         username: formData.get('username'),
         password: formData.get('password')
       };
 
       try {
-        const response = await fetch('http://localhost/BunkerGames/backend/users/login.php', {
+        const response = await fetch('http://localhost/BunkerGames/backend/users/register.php', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -23,11 +22,11 @@
         console.log(result);
 
         if (response.ok) {
-          alert(result.message || 'Inicio de sesión exitoso');
-          // Aquí puedes redirigir, guardar token, etc.
-          // window.location.href = 'dashboard.html';
+          alert(result.message || 'Usuario registrado exitosamente');
+          // Puedes redirigir al login automáticamente:
+          // window.location.href = 'login.html';
         } else {
-          alert(result.message || 'Credenciales incorrectas');
+          alert(result.message || 'Error en el registro');
         }
       } catch (err) {
         console.error('Error al conectar con el servidor:', err);
