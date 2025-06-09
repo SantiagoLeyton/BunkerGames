@@ -1,19 +1,45 @@
 <?php
-require_once '../db/connection.php';
+// Cabecera para permitir solicitudes desde el frontend
+header('Access-Control-Allow-Origin: *');
+header('Content-Type: application/json');
 
-$data = json_decode(file_get_contents("php://input"));
+// Leer JSON puro del body
+$input = json_decode(file_get_contents('php://input'), true);
 
-$username = $data->username ?? '';
-$email = $data->email ?? '';
-$password = $data->password ?? '';
-
-if ($username && $email && $password) {
-    $hashed = password_hash($password, PASSWORD_DEFAULT);
-    $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $username, $email, $hashed);
-    $stmt->execute();
-    echo json_encode(["success" => true]);
-} else {
-    echo json_encode(["success" => false, "error" => "Datos incompletos"]);
+// Validar datos
+if (!isset($input['username'], $input['email'], $input['password'])) {
+    http_response_code(400);
+    echo json_encode(['error' => 'Faltan datos.']);
+    exit;
 }
+
+// Conectar a la base de datos (ajusta esto a tu configuración)
+$host = "localhost";
+$db = "bunkergames";
+$user = "root";
+$pass = "";
+
+$conn = new mysqli($host, $user, $pass, $db);
+
+if ($conn->connect_error) {
+    http_response_code(500);
+    echo json_encode(['error' => 'Error al conectar con la base de datos.']);
+    exit;
+}
+
+// Escapar e insertar
+$username = $conn->real_escape_string($input['username']);
+$email = $conn->real_escape_string($input['email']);
+$password = password_hash($input['password'], PASSWORD_DEFAULT); // Encriptar contraseña
+
+$sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
+
+if ($conn->query($sql) === TRUE) {
+    echo json_encode(['success' => 'Usuario registrado con éxito.']);
+} else {
+    http_response_code(500);
+    echo json_encode(['error' => 'Error al registrar usuario.']);
+}
+
+$conn->close();
 ?>
