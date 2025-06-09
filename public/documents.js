@@ -12,8 +12,3 @@ setInterval(() => {
   favicon.href = icons[current];
 }, 1000);
 
-// Hero
-var hero = document.getElementById('hero')
-for(let i = 0; i <= 39; i++) {
-  
-}

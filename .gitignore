@@ -1,8 +1,0 @@
-# Archivo de variables de entorno (sensibles)
-.env
-
-# Carpetas y archivos comunes a ignorar
-node_modules/
-uploads/
-.DS_Store          # Solo para macOS
-.vscode/           # Configuraciones de VS Code (opcional)

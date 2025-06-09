@@ -1,30 +1,21 @@
-
 const express = require('express');
 const app = express();
-const cors = require('cors');
 
 // Middlewares básicos
-app.use(cors());                  // Permitir requests desde el frontend
-app.use(express.json());          // Parsear JSON en las requests
+app.use(express.json()); // Para parsear JSON
+app.use(express.urlencoded({ extended: true })); // Para formularios HTML
 
-// Rutas
+// Rutas (¡aquí está el problema común!)
 const authRoutes = require('./routes/auth');
-const gameRoutes = require('./routes/games');
+const gamesRoutes = require('./routes/games');
+const usersRoutes = require('./routes/users');
 
-app.use('/api/auth', authRoutes);
-app.use('/api/games', gameRoutes);
+app.use('/api/auth', authRoutes); // Verifica que authRoutes sea una función/router válida
+app.use('/api/games', gamesRoutes);
+app.use('/api/users', usersRoutes);
 
 // Iniciar servidor
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
-
-/*
-require('dotenv').config(); // ← Añade esta línea
-const express = require('express');
-const app = express();
-
-// Ahora usa las variables de entorno
-const PORT = process.env.PORT || 3001; // Usa el puerto del .env o 3001 por defecto
-*/
