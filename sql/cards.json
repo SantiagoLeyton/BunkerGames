@@ -1,0 +1,106 @@
+[
+  { 
+    "name": "Roblox | 800 Robux",
+    "description": "Obten 800 Robux para gastar en Roblox, esto es mucho más que un videojuego: es una plataforma global de creación y juego en línea donde millones de usuarios pueden diseñar sus propios mundos virtuales y disfrutar de experiencias interactivas creadas por otros jugadores. Desarrollado por Roblox Corporation y lanzado en 2006, Roblox se ha convertido en uno de los ecosistemas de juego más grandes y dinámicos del mundo.",
+    "logo": "http://localhost/BunkerGames/frontend/images/cardsIcons/Robux_800.png",
+    "price": 42500,
+    "stock": 80
+  },
+
+  {
+    "name": "Roblox | 2000 Robux",
+    "description": "Obten 2000 Robux para gastar en Roblox, esto es mucho más que un videojuego: es una plataforma global de creación y juego en línea donde millones de usuarios pueden diseñar sus propios mundos virtuales y disfrutar de experiencias interactivas creadas por otros jugadores. Desarrollado por Roblox Corporation y lanzado en 2006, Roblox se ha convertido en uno de los ecosistemas de juego más grandes y dinámicos del mundo.",
+    "logo": "http://localhost/BunkerGames/frontend/images/cardsIcons/Robux_2000.png",
+    "price": 105000,
+    "stock": 93
+  },
+
+  {
+    "name": "Roblox | 4500 Robux",
+    "description": "Obten 4500 Robux para gastar en Roblox, esto es mucho más que un videojuego: es una plataforma global de creación y juego en línea donde millones de usuarios pueden diseñar sus propios mundos virtuales y disfrutar de experiencias interactivas creadas por otros jugadores. Desarrollado por Roblox Corporation y lanzado en 2006, Roblox se ha convertido en uno de los ecosistemas de juego más grandes y dinámicos del mundo.",
+    "logo": "http://localhost/BunkerGames/frontend/images/cardsIcons/Robux_4500.png",
+    "price": 210000,
+    "stock": 120
+  },
+
+  {
+    "name": "Pase de diamante Clash Royale",
+    "description": "Lleva tu juego al siguiente nivel con el Pass Royale, el complemento premium que transforma cada temporada de Clash Royale en una auténtica mina de oro. Gana más, desbloquea más, y domina las arenas con estilo mientras recolectas recompensas exclusivas y ventajas únicas.",
+    "logo": "http://localhost/BunkerGames/frontend/images/cardsIcons/CRPaseDeDiamante.png",
+    "price": 70000,
+    "stock": 45
+  },
+
+  {
+    "name": "1200 Gemas Clash Royale",
+    "description": "Obten 1200 Gemas, estas son el recurso más codiciado en Clash Royale, el combustible premium que convierte tu progreso en una carrera hacia la cima. Con solo unas cuantas gemas, puedes acelerar mejoras, desbloquear cofres al instante o participar en los desafíos más intensos del juego.",
+    "logo": "http://localhost/BunkerGames/frontend/images/cardsIcons/CR1200Gemas.png",
+    "price": 55000,
+    "stock": 97
+  },
+
+  {
+    "name": "14000 Gemas Clash Royale",
+    "description": "Obten 14000 Gemas, estas son el recurso más codiciado en Clash Royale, el combustible premium que convierte tu progreso en una carrera hacia la cima. Con solo unas cuantas gemas, puedes acelerar mejoras, desbloquear cofres al instante o participar en los desafíos más intensos del juego.",
+    "logo": "http://localhost/BunkerGames/frontend/images/cardsIcons/CR14000Gemas.png",
+    "price": 580000,
+    "stock": 32
+  },
+
+  {
+    "name": "CSGO.net | $10",
+    "description": "Genera un código digital que puedes utilizar en el sitio web oficial de CSGO 500 para añadir $5 dolares de fondos a tu cuenta. Estos fondos, denominados BUX, te permiten participar en diversos modos de juego y adquirir skins de CS:GO para personalizar tus armas",
+    "logo": "http://localhost/BunkerGames/frontend/images/cardsIcons/CSGO_5USD.png",
+    "price": 20000,
+    "stock": 68
+  },
+
+  {
+    "name": "CSGO.net | $20",
+    "description": "Genera un código digital que puedes utilizar en el sitio web oficial de CSGO 500 para añadir $20 dolares de fondos a tu cuenta. Estos fondos, denominados BUX, te permiten participar en diversos modos de juego y adquirir skins de CS:GO para personalizar tus armas",
+    "logo": "http://localhost/BunkerGames/frontend/images/cardsIcons/CSGO_20USD.png",
+    "price": 85000,
+    "stock": 46
+  },
+
+  {
+    "name": "CSGO.net | $50",
+    "description": "Genera un código digital que puedes utilizar en el sitio web oficial de CSGO 500 para añadir $50 dolares de fondos a tu cuenta. Estos fondos, denominados BUX, te permiten participar en diversos modos de juego y adquirir skins de CS:GO para personalizar tus armas",
+    "logo": "http://localhost/BunkerGames/frontend/images/cardsIcons/CSGO_50USD.png",
+    "price": 210000,
+    "stock": 65
+  },
+
+  {
+    "name": "Valorant | 1000 Valorant Points",
+    "description": "¡Recarga tu cuenta con Valorant Points (VP) y destaca en el campo de batalla! Con esta tarjeta puedes comprar: Skins exclusivas de armas, el pase de batalla con recompensas premium y accesorios cosméticos para tu perfil.",
+    "logo": "http://localhost/BunkerGames/frontend/images/cardsIcons/Valorant1000VP.png",
+    "price": 35000,
+    "stock": 74
+  },
+
+  {
+    "id": "Card011",
+    "name": "Valorant | Agente Élite",
+    "description": "Recarga tus Valorant Points y desbloquea lo mejor de tu arsenal. Con esta tarjeta, accede a: Skins edición limitada. Variantes de armas con efectos especiales. Contenido exclusivo del Pase de Batalla. Código digital instantáneo. Ideal para quienes quieren destacar en cada partida.",
+    "logo": "http://localhost/BunkerGames/frontend/images/cardsIcons/ValorantAgenteElite.png",
+    "price": 50000,
+    "stock": 99
+  },
+
+  {
+    "name": "Valorant | Colección Premium",
+    "description": "La personalización es poder. Esta tarjeta te permite conseguir: Bundles de armas temáticos. Tarjetas de jugador y sprays exclusivos. Avances de niveles en el Pase de Batalla. Compatible con cualquier cuenta LATAM. Canje rápido desde el cliente de juego Riot.",
+    "logo": "http://localhost/BunkerGames/frontend/images/cardsIcons/ValorantColeccionPremium.png",
+    "price": 75000,
+    "stock": 67
+  },
+
+  {
+    "name": "Fortnite | 1000 V-Bucks",
+    "description": "¡Haz que tu estilo brille en la isla! Con esta tarjeta puedes obtener PaVos (V-Bucks) para comprar: Skins de personajes y armas. Bailes y gestos divertidos. El Pase de Batalla y niveles extra.",
+    "logo": "http://localhost/BunkerGames/frontend/images/cardsIcons/Fortnite1000VBucks.png",
+    "price": 24000,
+    "stock": 54
+  }
+]

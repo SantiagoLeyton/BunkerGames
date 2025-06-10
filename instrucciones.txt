@@ -1,0 +1,27 @@
+# ES IMPORTANTE HACER ESTO PARA QUE FUNCIONE LA PÁGINA
+
+Asegurate de que tengas instalado lo siguiente:
+  * XAMPP (https://www.apachefriends.org/es/download.html)
+  * Composer (https://getcomposer.org/download/)
+  * Postman (https://www.postman.com/downloads/)
+      └── alternativa: descargar la extensión 'Thunder Client' (en visual studio code)
+
+Al tener instalado todo lo anterior vamos a ejecutar el siguietne paso a paso:
+
+1. Vas a abrir el XAMPP y ejecutas Apache y MySQL, luego de esto abres el admin de MySQL
+
+2. Desde el panel de phpMyAdmin vas a dirigirte a  la sección SQL y vas a pegar lo que aparece en la dirección 'sql/createDB.sql'
+    └── alternativa: dirígete a la seccion import y sube el archivo 'sql/createDB.sql'
+
+3. Desde el postman vas a subir uno por uno todos los juegos que estan en el JSON 'sql/games.json' de la siguiente manera
+    ├── Pones la url 'http://localhost/BunkerGames/cards/add_card.php'
+    ├── Pones la petición de post
+    ├── Copias el primer objeto 
+    |   ├── {"name": "...", "description": "...", "price": 100, "etc": ""}
+    |   ├── Copia solo el objeto, no copies la , que esta al final del objeto
+    |   └── Estamos hablando de copiar objeto por objeto, no el array completo
+    ├── Pegas el objeto JSON en la pestaña Body -> JSON
+    ├── Haces la petición
+    └── Repites el proceso hasta subir todos los juegos
+
+4. Repites el paso 3 pero con las tarjetas que estan en el JSON 'sql/cards.json'
