@@ -48,7 +48,7 @@
   },
 
   {
-    "name": "CSGO.net | $10",
+    "name": "CSGO.net | $5",
     "description": "Genera un código digital que puedes utilizar en el sitio web oficial de CSGO 500 para añadir $5 dolares de fondos a tu cuenta. Estos fondos, denominados BUX, te permiten participar en diversos modos de juego y adquirir skins de CS:GO para personalizar tus armas",
     "logo": "http://localhost/BunkerGames/frontend/images/cardsIcons/CSGO_5USD.png",
     "price": 20000,
@@ -56,9 +56,9 @@
   },
 
   {
-    "name": "CSGO.net | $20",
-    "description": "Genera un código digital que puedes utilizar en el sitio web oficial de CSGO 500 para añadir $20 dolares de fondos a tu cuenta. Estos fondos, denominados BUX, te permiten participar en diversos modos de juego y adquirir skins de CS:GO para personalizar tus armas",
-    "logo": "http://localhost/BunkerGames/frontend/images/cardsIcons/CSGO_20USD.png",
+    "name": "CSGO.net | $10",
+    "description": "Genera un código digital que puedes utilizar en el sitio web oficial de CSGO 500 para añadir $10 dolares de fondos a tu cuenta. Estos fondos, denominados BUX, te permiten participar en diversos modos de juego y adquirir skins de CS:GO para personalizar tus armas",
+    "logo": "http://localhost/BunkerGames/frontend/images/cardsIcons/CSGO_10USD.png",
     "price": 85000,
     "stock": 46
   },

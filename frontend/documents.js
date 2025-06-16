@@ -1,22 +1,5 @@
-// Function to change the favicon
-let icons = [
-  'images/PageIcons/favicon1.png',
-  'images/PageIcons/favicon2.png',
-  'images/PageIcons/favicon3.png'
-];
-
-let current = 0;
-setInterval(() => {
-  const favicon = document.getElementById('favicon');
-  current = (current + 1) % icons.length;
-  favicon.href = icons[current];
-}, 1000);
-
-// Hero
-// Espera a que el DOM esté listo
+// Carrusel de imágenes del hero
 document.addEventListener('DOMContentLoaded', () => {
-
-  /* --- 1) Usa EXACTAMENTE el array que ya tenías --- */
   const images = [
     'images/gamesPhotos/Cyberpunk2077_1.png',
     'images/gamesPhotos/Cyberpunk2077_2.png',
@@ -56,76 +39,125 @@ document.addEventListener('DOMContentLoaded', () => {
     'images/gamesPhotos/ResidentEvil_3.png',
     'images/gamesPhotos/TheWitcher3_1.png',
     'images/gamesPhotos/TheWitcher3_2.png',
-    'images/gamesPhotos/TheWitcher3_3.png',
+    'images/gamesPhotos/TheWitcher3_3.png'
   ];
 
-  /* --- 2) Barajamos y duplicamos para que nunca se acabe --- */
   const shuffled = images.sort(() => Math.random() - 0.5);
-  const allImages = shuffled.concat(shuffled);  // duplicado
-
+  const allImages = shuffled.concat(shuffled);
   const track = document.getElementById('slider-track');
 
-  /* --- 3) Insertamos las imágenes en el DOM --- */
   allImages.forEach(src => {
     const img = document.createElement('img');
-    img.src  = src;
-    img.alt  = 'Imagen del carrusel';
+    img.src = src;
+    img.alt = 'Imagen del carrusel';
     track.appendChild(img);
   });
 
-  /* --- 4) Cuando cargue la PRIMERA imagen calculamos velocidad --- */
   const firstImg = track.querySelector('img');
   firstImg.addEventListener('load', () => {
-
-    const imgWidth   = firstImg.offsetWidth + 10;     // 10 = gap
+    const imgWidth = firstImg.offsetWidth + 10;
     const totalWidth = imgWidth * allImages.length;
-
-    /* Ancho fijo para que el navegador sepa cuánto desplazar */
     track.style.width = totalWidth + 'px';
-
-    /* ≈ 100 px/s → ajusta dividiendo entre tu velocidad deseada */
-    const duration = totalWidth / 100; // segundos
-
-    /* Creamos la animación con JS para que encaje exactamente */
+    const duration = totalWidth / 100;
     track.style.animation = `scroll ${duration}s linear infinite`;
   });
-
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const loginBtn = document.querySelector(".button1");
+// Función para crear juegos o tarjetas
+function createProductCard(product, type) {
+  const user = JSON.parse(localStorage.getItem("user"));
 
-    loginBtn.addEventListener("click", function (e) {
-      e.preventDefault();
+  const card = document.createElement("div");
+  card.className = "product-card";
 
-      const username = document.getElementById("login-username").value;
-      const password = document.getElementById("login-password").value;
+  card.innerHTML = `
+    <img src="${product.logo}" alt="${product.name}">
+    <h3>${product.name}</h3>
+    <p>$${product.price}</p>
+    <button class="button">Añadir al carrito</button>
+  `;
 
-      // Mandar solicitud al backend
-      fetch("http://localhost/BunkerGames/backend/users/login.php", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          email: username, // Asumimos que ingresan email aquí
-          password: password
-        })
+  const button = card.querySelector("button");
+  button.addEventListener("click", () => {
+    if (!user) {
+      alert("Debes iniciar sesión para añadir al carrito.");
+      return;
+    }
+
+    fetch("http://localhost/BunkerGames/backend/cart/add_to_cart.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        user_id: user.id,
+        product_type: type,
+        product_id: product.id,
+        quantity: 1
       })
-      .then(res => res.json())
-      .then(data => {
-        if (data.success) {
-          alert("Inicio de sesión exitoso. Bienvenido " + data.user.username);
-          // Redirigir o guardar datos en localStorage
-          localStorage.setItem("user", JSON.stringify(data.user));
-          window.location.href = "index.html";
-        } else {
-          alert("Error: " + data.error);
-        }
-      })
-      .catch(err => {
-        console.error("Error al iniciar sesión:", err);
-        alert("Hubo un error al conectar con el servidor.");
-      });
+    })
+    .then(res => res.json())
+    .then(data => {
+      alert(data.message || "Producto añadido al carrito");
+    })
+    .catch(err => {
+      console.error("Error al añadir al carrito:", err);
     });
   });
+
+  return card;
+}
+
+// Cargar los juegos
+function loadGames() {
+  fetch("http://localhost/BunkerGames/backend/games/get_games.php")
+    .then(res => res.json())
+    .then(games => {
+      const container = document.getElementById("products-container");
+      if (!container) return;
+      games.forEach(game => {
+        const card = createProductCard(game, "game");
+        container.appendChild(card);
+      });
+    })
+    .catch(error => console.error("Error cargando los juegos:", error));
+}
+
+// Cargar las tarjetas de regalo
+function loadCards() {
+  fetch("http://localhost/BunkerGames/backend/cards/get_cards.php")
+    .then(res => res.json())
+    .then(cards => {
+      const container = document.getElementById("gift-cards-container");
+      if (!container) return;
+      cards.forEach(card => {
+        const cardElement = createProductCard(card, "card");
+        container.appendChild(cardElement);
+      });
+    })
+    .catch(error => console.error("Error cargando las tarjetas:", error));
+}
+
+// Mostrar login o cerrar sesión
+document.addEventListener("DOMContentLoaded", () => {
+  const authContainer = document.getElementById("auth-options");
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  if (authContainer) {
+    if (user) {
+      authContainer.innerHTML = `
+        <button class="btn" id="logout-btn">Cerrar sesión</button>
+      `;
+      document.getElementById("logout-btn").addEventListener("click", () => {
+        localStorage.removeItem("user");
+        window.location.reload();
+      });
+    } else {
+      authContainer.innerHTML = `
+        <button class="btn" onclick="window.location.href='pages/login.html'">Login</button>
+      `;
+    }
+  }
+
+  // Cargar productos dinámicamente
+  loadGames();
+  loadCards();
+});

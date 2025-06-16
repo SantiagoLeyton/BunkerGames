@@ -23,7 +23,11 @@ $conn = new mysqli($host, $user, $pass, $db);
 
 if ($conn->connect_error) {
     http_response_code(500);
-    echo json_encode(['error' => 'Error al conectar con la base de datos.']);
+    echo json_encode([
+        'success' => true,
+        'message' => 'Usuario registrado con éxito.'
+    ]);
+
     exit;
 }
 

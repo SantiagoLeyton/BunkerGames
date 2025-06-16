@@ -5,56 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Carrito de Compras - BunkerGames</title>
   <link rel="stylesheet" href="css/cart.css">
+  <link id="favicon" rel="icon" type="image/png" href="../images/PageIcons/favicon1.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap">
 </head>
 <body>
 
   <header class="navbar">
-   <button class="butto" data-text="Awesome">
+    <button class="butto" data-text="Awesome">
       <span class="actual-text">&nbsp;bunker&nbsp;</span>
       <span aria-hidden="true" class="hover-text">&nbsp;bunker games&nbsp;</span>
-      
- <button class="btn" onclick="window.location.href='../index.html'">
-  <span class="actual-text">&nbsp;volver a la Tienda&nbsp;</span>
-</button>
-
-    
+    </button>
+    <button class="btn" onclick="window.location.href='../index.html'">
+      <span class="actual-text">&nbsp;Volver a la Tienda&nbsp;</span>
+    </button>
   </header>
 
   <main class="cart-container">
     <h2>Tu carrito</h2>
-
-    <div class="cart-item">
-      <img src="../images/game1.jpg" alt="Juego 1">
-      <div class="item-details">
-        <h3>Nombre del Juego</h3>
-        <p>$29.99</p>
-        
-      </div>
-      <button class="noselect"><span class="text">Eliminar</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
-    </div>
-
-    <div class="cart-item">
-      <img src="../images/game2.jpg" alt="Juego 2">
-      <div class="item-details">
-        <h3>Otro Juego</h3>
-        <p>$14.99</p>
-        
-      </div>
-      <button class="noselect"><span class="text">Eliminar</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
-    </div>
-
-    <div class="cart-total">
-      <h3>Total: $59.97</h3>
-<button class="butoncito">
- <svg viewBox="0 0 16 16" class="bi bi-cart-check" height="24" width="24" xmlns="http://www.w3.org/2000/svg" fill="#fff">
-  <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"></path>
-  <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
-</svg>
-  <p class="text">comprar</p>
-</button>
-    </div>
+    <!-- Aquí se insertarán dinámicamente los elementos del carrito -->
   </main>
 
+  <div class="cart-total">
+    <h3>Total: $0.00</h3>
+    <button class="butoncito" id="buy-button">
+      <svg viewBox="0 0 16 16" class="bi bi-cart-check" height="24" width="24" xmlns="http://www.w3.org/2000/svg" fill="#fff">
+        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"></path>
+        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+      </svg>
+      <p class="text">Comprar</p>
+    </button>
+  </div>
+
+  <script src="js/cart.js"></script>
 </body>
 </html>

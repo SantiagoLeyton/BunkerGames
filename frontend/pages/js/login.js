@@ -1,36 +1,60 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const loginForm = document.getElementById('loginForm');
+  const loginButton = document.querySelector('.button1');   // Iniciar sesión
+  const registerButton = document.querySelector('.button2'); // Registrarse
 
-    const loginForm = document.getElementById('loginForm');
+  // Maneja clic en "Iniciar sesión"
+  loginButton.addEventListener('click', async (e) => {
+    e.preventDefault();
+    await handleAuth('login');
+  });
 
-    loginForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
+  // Maneja clic en "Registrarse"
+  registerButton.addEventListener('click', async (e) => {
+    e.preventDefault();
+    await handleAuth('register');
+  });
 
-      const formData = new FormData(loginForm);
-      const data = {
-        username: formData.get('username'),
-        password: formData.get('password')
-      };
+  async function handleAuth(mode) {
+    const formData = new FormData(loginForm);
+    const username = formData.get('username');
+    const password = formData.get('password');
 
-      try {
-        const response = await fetch('http://localhost/BunkerGames/backend/users/login.php', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(data)
-        });
+    const data =
+      mode === 'register'
+        ? { username: username, email: username, password } // Registro necesita los 3
+        : { email: username, password };                    // Login necesita email y password
 
-        const result = await response.json();
-        console.log(result);
+    const url =
+      mode === 'login'
+        ? 'http://localhost/BunkerGames/backend/users/login.php'
+        : 'http://localhost/BunkerGames/backend/users/register.php';
 
-        if (response.ok) {
-          alert(result.message || 'Inicio de sesión exitoso');
-          // Aquí puedes redirigir, guardar token, etc.
-          // window.location.href = 'dashboard.html';
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+      console.log(result);
+
+      if (response.ok && result.success) {
+        alert(result.message || (mode === 'login' ? 'Inicio de sesión exitoso' : 'Registro exitoso'));
+
+        if (mode === 'login') {
+          localStorage.setItem("user", JSON.stringify(result.user));
+          window.location.href = "../index.html";
         } else {
-          alert(result.message || 'Credenciales incorrectas');
+          window.location.href = "login.html"; // o recarga formulario vacío
         }
-      } catch (err) {
-        console.error('Error al conectar con el servidor:', err);
-        alert('Error al conectar con el servidor');
+      } else {
+        alert(result.message || 'Ocurrió un error');
       }
-    });
+    } catch (err) {
+      console.error('Error al conectar con el servidor:', err);
+      alert('No se pudo conectar con el servidor');
+    }
+  }
+});
