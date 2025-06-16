@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-/*  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const loginBtn = document.querySelector(".button1");
 
     loginBtn.addEventListener("click", function (e) {
@@ -129,4 +129,3 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
-*/
