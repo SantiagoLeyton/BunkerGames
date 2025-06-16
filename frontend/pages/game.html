@@ -1,13 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="pageTitle">Bunker Games</title>
-    <link id="favicon" rel="icon" type="image/png" href="images/PageIcons/favicon1.png">
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detalles del Juego - BunkerGames</title>
+  <link rel="stylesheet" href="css/game.css" />
+  
 </head>
+
 <body>
-    <script src="documents.js"></script>
+    <header class="navbar">
+    <button class="butto" data-text="Awesome">
+      <span class="actual-text">&nbsp;bunker&nbsp;</span>
+      <span aria-hidden="true" class="hover-text">&nbsp;bunker games&nbsp;</span>
+    </button>
+  
+    <nav class="menu">
+      <button class="btn">inicio</button>
+      <button class="btn">categorias</button>
+      <button class="btn">ofertas</button>
+      <button class="btn">tarjetas de regalo</button>
+    </nav>
+  
+    <div class="navbar-right">
+  <button class="btn" onclick="window.location.href='pages/cart.html'">
+    🛒 <span class="cart-count">0</span>
+  </button>
+</div>
+  
+      <button class="btn">perfil</button>
+      <button class="btn" onclick="window.location.href='pages/login.html'">login </button>
+  
+      <div class="searchBox">
+        <input class="searchInput" type="text" placeholder="Buscar...">
+        <button class="searchButton">
+          <!-- Ícono de búsqueda -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+            <g clip-path="url(#clip0_2_17)">
+              <g filter="url(#filter0_d_2_17)">
+                <path d="M23.7953 23.9182L19.0585 19.1814M19.0585 19.1814C19.8188 18.4211 20.4219 17.5185 20.8333 16.5251C21.2448 15.5318 21.4566 14.4671 21.4566 13.3919C21.4566 12.3167 21.2448 11.252 20.8333 10.2587C20.4219 9.2653 19.8188 8.36271 19.0585 7.60242C18.2982 6.84214 17.3956 6.23905 16.4022 5.82759C15.4089 5.41612 14.3442 5.20435 13.269 5.20435C12.1938 5.20435 11.1291 5.41612 10.1358 5.82759C9.1424 6.23905 8.23981 6.84214 7.47953 7.60242C5.94407 9.13789 5.08145 11.2204 5.08145 13.3919C5.08145 15.5634 5.94407 17.6459 7.47953 19.1814C9.01499 20.7168 11.0975 21.5794 13.269 21.5794C15.4405 21.5794 17.523 20.7168 19.0585 19.1814Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" shape-rendering="crispEdges"></path>
+              </g>
+            </g>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="game-container">
+    <div class="main-info">
+      <img src="images/juego-ejemplo.jpg" alt="Portada del juego" />
+
+      <div class="game-details">
+        <h1 class="game-title">CyberAventura 2077</h1>
+        <p class="price">$39.99 USD</p>
+        <p>
+          CyberAventura 2077 es un juego de rol de mundo abierto ambientado en un futuro distópico.
+          Explora ciudades inmensas, participa en misiones peligrosas y mejora tus habilidades
+          cibernéticas mientras enfrentas decisiones que cambiarán el destino de la humanidad.
+        </p>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img src="images/screen1.jpg" alt="Captura 1" />
+      <img src="images/screen2.jpg" alt="Captura 2" />
+      <img src="images/screen3.jpg" alt="Captura 3" />
+    </div>
+
+    <div class="requirements">
+      <h3>Requisitos mínimos</h3>
+      <ul>
+        <li>SO: Windows 10</li>
+        <li>Procesador: Intel Core i5-2500K / AMD FX-6300</li>
+        <li>Memoria: 8 GB RAM</li>
+        <li>Gráficos: GTX 970 / RX 470</li>
+        <li>Almacenamiento: 70 GB disponibles</li>
+      </ul>
+
+      <h3>Requisitos recomendados</h3>
+      <ul>
+        <li>SO: Windows 10</li>
+        <li>Procesador: Intel Core i7-4790 / AMD Ryzen 5 3600</li>
+        <li>Memoria: 16 GB RAM</li>
+        <li>Gráficos: GTX 1070 / RX 5700</li>
+        <li>Almacenamiento: SSD + 70 GB disponibles</li>
+      </ul>
+    </div>
+
+    
+  </div>
 </body>
 </html>
