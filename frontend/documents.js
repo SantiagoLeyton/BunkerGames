@@ -157,6 +157,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  function updateCartCount() {
+  const user = JSON.parse(localStorage.getItem("user"));
+  const countElement = document.querySelector(".cart-count");
+
+  if (!user || !countElement) return;
+
+  fetch(`http://localhost/BunkerGames/backend/cart/get_cart.php?user_id=${user.id}`)
+    .then(res => res.json())
+    .then(data => {
+      if (!data.success || !data.cart) return;
+
+      const totalItems = data.cart.reduce((sum, item) => sum + item.quantity, 0);
+      countElement.textContent = totalItems;
+    })
+    .catch(err => {
+      console.error("Error al obtener el carrito:", err);
+    });
+}
+
+
   // Cargar productos dinámicamente
   loadGames();
   loadCards();
